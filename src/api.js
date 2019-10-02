@@ -1,7 +1,7 @@
 const isEqual = require('lodash.isequal');
 const normalize = require('@mapbox/geojson-normalize');
-const hat = require('hat');
-const featuresAt = require('./lib/features_at');
+const hat = require('hat'); // 用于生成随机数
+const featuresAt = require('./lib/features_at'); // 作用？？点击或者touch时候获取要素是缓存的要素？？, featuresAt(event, bbox, ctx, buffer)
 const stringSetsAreEqual = require('./lib/string_sets_are_equal');
 const geojsonhint = require('@mapbox/geojsonhint');
 const Constants = require('./constants');
@@ -18,11 +18,11 @@ const featureTypes = {
 
 module.exports = function(ctx, api) {
 
-  api.modes = Constants.modes;
+  api.modes = Constants.modes; // 组件模式，包括标绘、选择。。。。
 
   api.getFeatureIdsAt = function(point) {
     const features = featuresAt.click({ point }, null, ctx);
-    return features.map(feature => feature.properties.id);
+    return features.map(feature => feature.properties.id); // map方法，获取结果为要素id的数组
   };
 
   api.getSelectedIds = function () {
