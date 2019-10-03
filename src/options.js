@@ -11,7 +11,7 @@ const defaultOptions = {
   displayControlsDefault: true,
   styles: require('./lib/theme'),
   modes: require('./modes'),
-  controls: {},
+  controls: {}, // displayControlsDefault设置为false时候，用于判断显示哪些按钮
   userProperties: false
 };
 

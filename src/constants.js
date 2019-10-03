@@ -1,6 +1,6 @@
 module.exports = {
   classes: {
-    CONTROL_BASE: 'mapboxgl-ctrl',
+    CONTROL_BASE: 'mapboxgl-ctrl', // 为了使用Mapbox GL JS 默认的控件样式，需要添加mapboxgl-ctrl 类到你的控件 节点中。
     CONTROL_PREFIX: 'mapboxgl-ctrl-',
     CONTROL_BUTTON: 'mapbox-gl-draw_ctrl-draw-btn',
     CONTROL_BUTTON_LINE: 'mapbox-gl-draw_line',
